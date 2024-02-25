@@ -183,6 +183,7 @@ SIGNAL_POWER_SENSOR_STATE_CHANGE = "powercalc_power_sensor_state_change"
 
 OFF_STATES = (STATE_OFF, STATE_NOT_HOME, STATE_STANDBY, STATE_UNAVAILABLE)
 
+<<<<<<< HEAD
 
 class CalculationStrategy(StrEnum):
     """Possible virtual power calculation strategies."""
@@ -209,3 +210,52 @@ class PowercalcDiscoveryType(StrEnum):
     STANDBY_GROUP = "standby_group"
     LIBRARY = "library"
     USER_YAML = "user_yaml"
+=======
+MODEL_DIRECTORY_MAPPING = {
+    "IKEA of Sweden": {
+        "FLOALT panel WS 30x30": "L1527",
+        "FLOALT panel WS 60x60": "L1529",
+        "TRADFRI bulb E14 WS opal 400lm": "LED1536G5",
+        "TRADFRI bulb GU10 WS 400lm": "LED1537R6",
+        "TRADFRI bulb E27 WS opal 980lm": "LED1545G12",
+        "TRADFRI bulb E27 WS clear 950lm": "LED1546G12",
+        "TRADFRI bulb E27 opal 1000lm": "LED1623G12",
+        "TRADFRI bulb E27 W opal 1000lm": "LED1623G12",
+        "TRADFRI bulb E27 CWS opal 600lm": "LED1624G9",
+        "TRADFRI bulb E14 W op/ch 400lm": "LED1649C5",
+        "TRADFRI bulb GU10 W 400lm": "LED1650R5",
+        "TRADFRI bulb E27 WS opal 1000lm": "LED1732G11",
+        "TRADFRI bulb E14 WS opal 600lm": "LED1733G7",
+        "TRADFRI bulb E27 WS clear 806lm": "LED1736G9",
+        "TRADFRI bulb E14 WS opal 600lm": "LED1738G7",
+        "TRADFRI bulb E14 WS 470lm": "LED1835C6",
+        "TRADFRI bulb E27 WW 806lm": "LED1836G9",
+        "TRADFRI bulb E27 WW clear 250lm": "LED1842G3",
+        "TRADFRI bulb GU10 WW 400lm": "LED1837R5",
+        "TRADFRI bulb GU10 CWS 345lm": "LED1923R5",
+        "TRADFRI bulb E27 CWS 806lm": "LED1924G9",
+        "TRADFRI bulb E14 CWS 470lm": "LED1925G6",
+        "TRADFRIbulbE14WScandleopal470lm": "LED1949C5",
+        "TRADFRIbulbE14WSglobeopal470lm": "LED2002G5",
+        "TRADFRIbulbE27WSglobeopal1055lm": "LED2003G10",
+        "TTRADFRIbulbGU10WS345lm": "LED2005R5",
+        "TRADFRI bulb GU10 WW 345lm": "LED2005R5",
+        "LEPTITER Recessed spot light": "T1820",
+    },
+    "Signify Netherlands B.V.": {
+        "9290022166": "LCA001",
+        "929001953101": "LCG002",
+        "9290012573A": "LCT015",
+        "440400982841": "LCT024",
+        "7602031P7": "LCT026",
+        "9290022169": "LTA001",
+        "3261030P6": "LTC001",
+        "3261031P6": "LTC001",
+        "3261048P6": "LTC001",
+        "3418931P6": "LTC012",
+        "3417711P6": "LTW017",
+        "8718699673147": "LWA001",
+        "8718696449691": "LWB010",
+    },
+}
+>>>>>>> refs/remotes/origin/master
