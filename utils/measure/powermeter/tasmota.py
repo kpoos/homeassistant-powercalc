@@ -1,19 +1,31 @@
 from __future__ import annotations
 
 import time
-import urllib.request
+from typing import Any
 
+import requests
+
+from .errors import PowerMeterError
 from .powermeter import PowerMeasurementResult, PowerMeter
 
 
 class TasmotaPowerMeter(PowerMeter):
-    def __init__(self, device_ip: str):
+    def __init__(self, device_ip: str) -> None:
         self._device_ip = device_ip
 
     def get_power(self) -> PowerMeasurementResult:
-        contents = str(
-            urllib.request.urlopen("http://" + self._device_ip + "/?m").read()
+        r = requests.get(
+            f"http://{self._device_ip}/cm?cmnd=STATUS+8",
+            timeout=10,
         )
-        contents = contents.split(" W{e}")[0]
-        contents = contents.split("{m}")[-1]
-        return PowerMeasurementResult(float(contents), time.time())
+        json = r.json()
+
+        try:
+            power = json["StatusSNS"]["ENERGY"]["Power"]
+        except KeyError as error:
+            raise PowerMeterError("Unexpected JSON response format") from error
+
+        return PowerMeasurementResult(float(power), time.time())
+
+    def process_answers(self, answers: dict[str, Any]) -> None:
+        pass

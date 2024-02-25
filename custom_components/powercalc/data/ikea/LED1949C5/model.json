@@ -7,9 +7,20 @@
         "SLEEP_TIME": 2,
         "VERSION": "v0.18.4:docker"
     },
+<<<<<<< HEAD
     "name": "TRADFRIbulbE14WScandleopal470lm",
     "standby_power": 0.2,
     "supported_modes": [
         "lut"
     ]
 }
+=======
+    "name": "TRADFRI bulb E14 WS candle opal 470lm",
+    "standby_power": 0.2,
+    "calculation_strategy": "lut",
+    "aliases": [
+        "TRADFRIbulbE14WScandleopal470lm"
+    ]
+}
+
+>>>>>>> upstream/master

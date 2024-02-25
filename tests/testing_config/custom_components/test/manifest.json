@@ -1,0 +1,10 @@
+{
+  "domain": "test",
+  "name": "Test Components",
+  "codeowners": [],
+  "dependencies": [],
+  "documentation": "https://example.com",
+  "iot_class": "assumed_state",
+  "requirements": [],
+  "version": "1.2.3"
+}

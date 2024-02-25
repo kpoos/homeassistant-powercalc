@@ -6,5 +6,9 @@ class OutdatedMeasurementError(PowerMeterError):
     pass
 
 
-class ConnectionError(PowerMeterError):
+class ZeroReadingError(PowerMeterError):
+    pass
+
+
+class ApiConnectionError(PowerMeterError):
     pass
